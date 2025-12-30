@@ -9,7 +9,7 @@
 
 body {
   font-family: "Inter", Arial, sans-serif;
-  background-color: #f5f7fa;
+  /* background-color: #f5f7fa; */
   color: #1f2937;
   line-height: 1.6;
 }
@@ -24,39 +24,78 @@ body {
 /* =====================
    HERO SECTION
 ===================== */
+
 .hero {
   width: 100%;
-  padding: 80px 260px;
-  background: #ffffff;
+  padding: 80px 40px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
 }
 
-.hero > * {
-  max-width: 1000px;
+.hero-content {
+  max-width: 1200px;
   width: 100%;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 60px;
 }
 
-.title {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 16px;
+/* IMAGE */
+
+.hero-image {
+  display: flex;
+  justify-content: center;
 }
 
-.subtitle {
-  font-size: 1.4rem;
-  font-weight: 500;
-  color: #374151;
-  margin-bottom: 20px;
+
+.hero-image img {
+  width: 100%;
+  max-width: 520px;
+  display: block;
+  filter: saturate(0.95);
+
+  border-radius: 20px;
+  opacity: 0.92;
+
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.08);
+
+  background: #ffffff;
 }
 
-.description {
-  max-width: 650px;
-  margin: 0 auto 32px;
-  color: #4b5563;
+
+/* TEXT */
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
+
+/* =====================
+   HERO RESPONSIVE
+===================== */
+
+@media (max-width: 768px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-image {
+    order: -1;
+  }
+
+  .hero-image img {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .hero-text {
+    align-items: center;
+  }
+}
+
 
 /* BUTTON */
 .primary-btn {
@@ -88,7 +127,7 @@ hr {
 .section {
   width: 100%;
   padding: 70px 20px;
-  background: #f9fafb;
+  /* background: #f9fafb; */
   display: flex;
   justify-content: center;
 }
@@ -127,7 +166,7 @@ hr {
 .footer {
   width: 100%;
   padding: 40px 20px;
-  background: #ffffff;
+  /* background: #ffffff; */
   text-align: center;
   font-size: 0.9rem;
   color: #6b7280;

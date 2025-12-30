@@ -7,32 +7,45 @@ function HomePage() {
   const navigate = useNavigate();
   return (
     <div className="homepage">
-      
+
       {/* HERO SECTION */}
       <section className="hero">
-        <h1 className="title">SchemeGuide</h1>
+        <div className="hero-content">
 
-        <h2 className="subtitle">
-          Find government schemes you may be eligible for
-        </h2>
+          {/* LEFT: IMAGE */}
+          <div className="hero-image">
+            <img
+              src="/hero-image.jpg"
+              alt="Eligibility checklist illustration"
+            />
+          </div>
 
-        <p className="description">
-          Answer a few simple questions and get clear information with official
-          application links.
-        </p>
+          {/* RIGHT: TEXT */}
+          <div className="hero-text">
+            <h1 className="title">SchemeGuide</h1>
 
-        {/* <button
-          className="primary-btn"
-          onClick={() => console.log("Check Eligibility clicked")}
-        >
-          Check Eligibility
-        </button> */}
-        <button className="primary-btn" onClick={()=> navigate("/check-eligibility")}>
-          Check Eligibility
-        </button>
+            <h2 className="subtitle">
+              Find government schemes you may be eligible for
+            </h2>
+
+            <p className="description">
+              Answer a few simple questions and get clear information with official
+              application links.
+            </p>
+
+            <button
+              className="primary-btn"
+              onClick={() => navigate("/check-eligibility")}
+            >
+              Check Eligibility
+            </button>
+          </div>
+
+        </div>
       </section>
 
       <hr />
+
 
       {/* HOW IT WORKS */}
       <section className="section">
