@@ -33,23 +33,45 @@ function EligibilityPage() {
     };
 
     const handleSubmit = async () => {
-        try {
-            console.log("Sending to backend:", formData);
+  try {
+    // 1️⃣ Convert UI values → backend-friendly values
+    const formattedData = {
+      ...formData,
 
-            const res = await fetch("http://localhost:5000/api/eligibility", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(formData),
-            });
+      age: Number(formData.age),
 
-            const data = await res.json();
-            console.log("Response from backend:", data);
-        } catch (error) {
-            console.error("Submit error:", error);
-        }
+      income:
+        formData.income === "Below ₹1 Lakh"
+          ? 100000
+          : formData.income === "₹1 – 2.5 Lakh"
+          ? 250000
+          : formData.income === "₹2.5 – 5 Lakh"
+          ? 500000
+          : 1000000,
+
+      category: formData.category.toUpperCase(),
     };
+
+    console.log("Sending to backend:", formattedData);
+
+    // 2️⃣ Send to backend
+    const res = await fetch("http://localhost:5000/api/eligibility", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formattedData),
+    });
+
+    // 3️⃣ Read response
+    const data = await res.json();
+    console.log("Response from backend:", data);
+
+  } catch (error) {
+    console.error("Submit error:", error);
+  }
+};
+
 
 
     return (
