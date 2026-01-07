@@ -1,3 +1,5 @@
+import Navbar from "../pages/Navbar";
+
 function AppLayout({ children }) {
   return (
     <div className="app-layout">
@@ -49,6 +51,7 @@ function AppLayout({ children }) {
 
       {/* Page Content */}
       <div className="app-content">
+        <Navbar />
         {children}
       </div>
     </div>

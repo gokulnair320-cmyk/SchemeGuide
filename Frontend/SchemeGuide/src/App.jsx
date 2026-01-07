@@ -1,35 +1,24 @@
-import { useEffect, useState } from "react";
-// import './App.css'
 import HomePage from "./pages/HomePage";
 import EligibilityPage from "./pages/EligibilityPage";
-import { Routes, Route } from "react-router-dom"; 
+import { Routes, Route } from "react-router-dom";
 import AppLayout from "./layouts/AppLayout";
+import About from "./pages/About";
+import FAQs from "./pages/FAQs";
+import Contact from "./pages/Contact";
+
+
 
 function App() {
-  const [message, setMessage] = useState("");
-
-  // useEffect(() => {
-  //   fetch("http://localhost:5000/")
-  //     .then(res => res.text())
-  //     .then(data => setMessage(data));
-  // }, []);
-
-  // return (
-  //   <div>
-  //     <h1>SchemeGuide</h1>
-  //     <p>{message}</p>
-  //     <button>Check Eligibility</button>
-  //   </div>
-  // );
   return (
-  // <HomePage message={message} />
-    //  <HomePage /> 
     <AppLayout>
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/check-eligibility" element={<EligibilityPage />} />
-    </Routes>
-  </AppLayout>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/faqs" element={<FAQs />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/check-eligibility" element={<EligibilityPage />} />
+      </Routes>
+    </AppLayout>
   );
 }
 

@@ -1,10 +1,9 @@
 import "./HomePage.css";
 import { useNavigate } from "react-router-dom";
 
-
-
 function HomePage() {
   const navigate = useNavigate();
+
   return (
     <div className="homepage">
 
@@ -46,7 +45,6 @@ function HomePage() {
 
       <hr />
 
-
       {/* HOW IT WORKS */}
       <section className="section">
         <h3>How it works</h3>
@@ -85,6 +83,7 @@ function HomePage() {
           Final eligibility is decided by authorities.
         </p>
       </footer>
+
     </div>
   );
 }

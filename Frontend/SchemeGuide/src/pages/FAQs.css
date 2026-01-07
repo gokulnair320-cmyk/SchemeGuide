@@ -1,0 +1,44 @@
+.faqs-page {
+  min-height: 100vh;
+  background-color: hsl(var(--background));
+}
+
+.faqs-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.faqs-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(var(--gov-blue));
+  margin-bottom: 2rem;
+}
+
+.faqs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.faq-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid hsl(var(--border));
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-question {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: hsl(var(--gov-blue));
+  margin-bottom: 0.5rem;
+}
+
+.faq-answer {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: hsl(var(--foreground));
+}

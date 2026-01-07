@@ -71,7 +71,7 @@ button:focus-visible {
    APP LAYOUT (GLOBAL)
 ===================== */
 
-.app-layout {
+/* .app-layout {
   min-height: 100vh;
   width: 100%;
   position: relative;
@@ -79,16 +79,69 @@ button:focus-visible {
 }
 
 /* Background pattern layer */
-.app-background {
+/* .app-background {
   position: absolute;
   inset: 0;
   z-index: 0;
   pointer-events: none;
-}
+} */
 
 /* Actual app content */
-.app-content {
+/* .app-content {
   position: relative;
   z-index: 1;
+/* }
+ /* */ 
+ @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Core colors */
+  --background: 210 20% 98%;
+  --foreground: 220 30% 15%;
+  --border: 214 25% 88%;
+
+  /* Accent / CTA */
+  --accent: 32 95% 50%;
+
+  /* Government palette */
+  --gov-blue-dark: 215 75% 20%;
+  --gov-blue: 215 70% 28%;
+  --gov-blue-light: 210 60% 45%;
+  --gov-success: 142 70% 35%;
+  --gov-text-muted: 215 15% 50%;
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(
+    135deg,
+    hsl(215 75% 20%) 0%,
+    hsl(215 70% 28%) 50%,
+    hsl(210 60% 38%) 100%
+  );
+
+  --gradient-cta: linear-gradient(
+    135deg,
+    hsl(32 95% 50%) 0%,
+    hsl(25 95% 45%) 100%
+  );
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Global base styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
 }
 

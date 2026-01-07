@@ -1,0 +1,30 @@
+.contact-page {
+  min-height: 100vh;
+  background-color: hsl(var(--background));
+}
+
+.contact-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.contact-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(var(--gov-blue));
+  margin-bottom: 1.5rem;
+}
+
+.contact-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: hsl(var(--foreground));
+  margin-bottom: 1rem;
+}
+
+.contact-email {
+  color: hsl(var(--gov-blue));
+  font-weight: 600;
+  text-decoration: underline;
+}
